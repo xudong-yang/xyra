@@ -3,8 +3,7 @@
     --bg: #ffffff;
     --text: #222222;
     --border: #222222;
-    --link: #0000ee;
-    --link-visited: #551a8b;
+    --accent: #255F38;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,8 +11,7 @@
         --bg: #0f1115;
         --text: #e6e8eb;
         --border: #3a4048;
-        --link: #8ab4f8;
-        --link-visited: #c58af9;
+        --accent: #a0d585;
     }
 }
 
@@ -33,11 +31,10 @@ footer {
 }
 
 a {
-    color: var(--link);
+    color: var(--accent);
     text-decoration: none;
 }
 
-a:visited {
-    color: var(--link-visited);
+a:hover {
+    text-decoration: underline;
 }
-
