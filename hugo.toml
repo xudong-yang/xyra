@@ -1,17 +1,17 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-US'
-title = 'Nex - a minimalistic theme'
+title = 'Nex Minimal'
 disableKinds = ['taxonomy']
 
 [menus]
 
   [[menus.main]]
-    name = 'Posts'
+    name = 'posts'
     pageRef = '/posts'
     weight = 20
 
   [[menus.main]]
-    name = 'About'
+    name = 'about'
     pageRef = '/about'
     weight = 25
 
