@@ -1,5 +1,25 @@
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --text: #222222;
+    --border: #222222;
+    --link: #0000ee;
+    --link-visited: #551a8b;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1115;
+        --text: #e6e8eb;
+        --border: #3a4048;
+        --link: #8ab4f8;
+        --link-visited: #c58af9;
+    }
+}
+
 body {
-    color: #222;
+    color: var(--text);
+    background: var(--bg);
     font-family: sans-serif;
     line-height: 1.5;
     max-width: 768px;
@@ -8,13 +28,16 @@ body {
 }
 
 footer {
-    border-top: 1px solid #222;
+    border-top: 1px solid var(--border);
     margin-top: 1rem;
 }
 
 a {
-    color: #00e;
+    color: var(--link);
     text-decoration: none;
 }
 
+a:visited {
+    color: var(--link-visited);
+}
 
