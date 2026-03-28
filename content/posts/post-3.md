@@ -23,3 +23,12 @@ console.log(result, ok, data);
 {{< /highlight >}}
 
 Aliquip Lorem officia est in `incididunt excepteur pariatur` do fugiat cupidatat. Magna incididunt enim voluptate consequat non laboris deserunt labore velit sit. Adipisicing veniam anim elit laboris qui dolor dolore. Reprehenderit aliquip pariatur cillum ullamco ullamco qui eiusmod cupidatat ea exercitation.
+
+| Language   | Paradigm     | Typed  |
+| ---------- | ------------ | ------ |
+| Go         | Compiled     | Static |
+| Python     | Interpreted  | Dynamic|
+| TypeScript | Transpiled   | Static |
+| Rust       | Compiled     | Static |
+
+Ut laboris minim fugiat reprehenderit pariatur excepteur duis aliqua incididunt. Commodo deserunt nisi laboris proident nostrud dolore ea velit. Tempor anim esse incididunt occaecat sint nulla voluptate ut culpa fugiat.

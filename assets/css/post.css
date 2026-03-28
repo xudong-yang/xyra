@@ -17,3 +17,27 @@ figcaption {
     text-align: left;
     font-style: italic;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95em;
+}
+
+table th {
+    text-align: left;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-bottom: 2px solid var(--border);
+}
+
+table td {
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    opacity: 0.85;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
