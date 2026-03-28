@@ -1,0 +1,17 @@
+figure {
+    margin: 2rem 0;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85em;
+    opacity: 0.6;
+    text-align: left;
+    font-style: italic;
+}
