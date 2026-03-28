@@ -18,6 +18,26 @@ figcaption {
     font-style: italic;
 }
 
+.highlight table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.highlight td:first-child {
+    width: 2.5rem;
+}
+
+.highlight td:last-child pre {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.highlight td:last-child code {
+    display: block;
+    min-width: max-content;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
