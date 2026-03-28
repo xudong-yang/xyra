@@ -4,6 +4,7 @@
     --text: #222222;
     --border: #222222;
     --accent: #255f38;
+    --opacity-secondary: 0.7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +29,8 @@ body {
 footer {
     border-top: 1px solid var(--border);
     margin-top: 1rem;
+    color: var(--text);
+    opacity: var(--opacity-secondary);
 }
 
 a {
