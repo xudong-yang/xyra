@@ -1,28 +1,4 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ $tags := .Site.Taxonomies.tags }}
-{{ if $tags }}
-<section class="tag-list">
-    <h2>Tags</h2>
-    <ul>
-        {{ range sort $tags ".Count" "desc" }}
-        <li>
-            <a href="{{ .Page.RelPermalink }}"><span>{{ .Page.Title }}</span><small>({{ .Count }})</small></a>
-        </li>
-        {{ end }}
-    </ul>
-</section>
-{{ end }}
-
-<section class="post-list">
-    <h2>All</h2>
-    <ul>
-        {{ range .Pages.ByDate.Reverse }}
-        <li class="post-list-item">
-            <strong><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></strong>
-            <small>{{ .Date | time.Format ":date_medium" }}</small>
-        </li>
-        {{ end }}
-    </ul>
-</section>
+<h1>everything</h1>
+{{ partial "post-list.html" (dict "page" . "activeTag" "") }}
 {{ end }}

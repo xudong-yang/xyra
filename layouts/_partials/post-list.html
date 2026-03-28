@@ -1,0 +1,30 @@
+{{- $activeTag := .activeTag -}}
+{{- $page := .page -}}
+{{- $tags := $page.Site.Taxonomies.tags -}}
+
+<div class="tag-bar">
+    {{- range $name, $posts := $tags }}
+    {{- $term := $page.Site.GetPage (printf "/tags/%s" $name) }}
+    {{- if $term }}
+    <a href="{{ $term.RelPermalink }}"
+       class="tag-item{{ if eq $name $activeTag }} active{{ end }}">#{{ $name }}</a>
+    {{- end }}
+    {{- end }}
+</div>
+
+{{- if $activeTag }}
+<p class="tag-filter-label">
+    Showing posts tagged <span class="tag-filter-name">#{{ $activeTag }}</span> —
+    {{- $postsPage := $page.Site.GetPage "/posts" }}
+    <a href="{{ $postsPage.RelPermalink }}">show all</a>
+</p>
+{{- end }}
+
+<ul class="post-list">
+    {{- range $page.Pages.ByDate.Reverse }}
+    <li class="post-item">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        <span class="post-date">{{ .Date | time.Format ":date_medium" }}</span>
+    </li>
+    {{- end }}
+</ul>
