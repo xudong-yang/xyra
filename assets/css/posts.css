@@ -50,30 +50,33 @@
 }
 
 .post-item {
+    border-radius: 4px;
+}
+
+.post-item:hover .post-item-link {
+    background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+.post-item-link {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
+    width: 100%;
     padding: 0.4rem 0.5rem;
     border-radius: 4px;
     transition: background 0.1s;
-}
-
-.post-item:hover {
-    background: color-mix(in srgb, var(--text) 6%, transparent);
-}
-
-.post-item a {
-    font-weight: 600;
+    font-weight: bold;
     color: var(--accent);
     text-decoration: none;
 }
 
-.post-item a:hover {
+.post-item-link:hover {
     text-decoration: none;
 }
 
 .post-date {
+    margin-left: auto;
     font-size: 0.875rem;
     color: var(--text);
     opacity: 0.6;

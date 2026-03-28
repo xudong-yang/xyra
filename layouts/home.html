@@ -19,12 +19,16 @@
     <ul class="post-list">
         {{- range $recentPosts }}
         <li class="post-item">
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-            <small class="post-date">{{ .Date | time.Format ":date_medium" }}</small>
+            <a class="post-item-link" href="{{ .RelPermalink }}">
+                <span class="post-title">{{ .LinkTitle }}</span>
+                <span class="post-date">{{ .Date | time.Format ":date_medium" }}</span>
+            </a>
         </li>
         {{- end }}
         <li class="post-item post-item--all">
-            <a href="{{ "/posts" | relURL }}">More posts →</a>
+            <a class="post-item-link" href="{{ "/posts" | relURL }}">
+                <span class="post-title">More posts →</span>
+            </a>
         </li>
     </ul>
 </section>
