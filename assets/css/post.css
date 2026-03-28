@@ -48,3 +48,7 @@ table tr:last-child td {
     gap: 0.25rem;
     margin-top: 2rem;
 }
+
+.recent-posts-section {
+    margin-top: 4rem;
+}
