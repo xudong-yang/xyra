@@ -1,9 +1,9 @@
 :root {
     color-scheme: light dark;
-    --bg: #ffffff;
+    --bg: #f2f6f1;
     --text: #222222;
     --border: #222222;
-    --accent: #255F38;
+    --accent: #255f38;
 }
 
 @media (prefers-color-scheme: dark) {
