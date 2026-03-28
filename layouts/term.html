@@ -1,4 +1,4 @@
 {{ define "main" }}
 <h1>#{{ .Name }}</h1>
-{{ partial "post-list.html" (dict "page" . "activeTag" .Title) }}
+{{ partial "post-list.html" (dict "page" . "activeTag" .Name) }}
 {{ end }}
