@@ -1,4 +1,9 @@
 {{ define "main" }}
+
+{{- with .Content }}
+<section class="home-intro">{{ . }}</section>
+{{- end }}
+
 {{- $posts := where site.RegularPages "Section" "posts" }}
 {{- $latest := index ($posts.ByDate.Reverse) 0 }}
 
