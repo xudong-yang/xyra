@@ -1,4 +1,5 @@
 {{ define "main" }}
+  <article>
   <h1>{{ .Title }}</h1>
 
   {{ if eq .Section "posts" }}
@@ -9,6 +10,7 @@
 
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </article>
 
   {{ if eq .Section "posts" }}
     {{ $prev := .PrevInSection }}

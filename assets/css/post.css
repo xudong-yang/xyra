@@ -1,3 +1,7 @@
+article time {
+    opacity: var(--opacity-secondary);
+}
+
 figure {
     margin: 2rem 0;
 }
