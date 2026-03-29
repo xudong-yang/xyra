@@ -2,6 +2,11 @@ article time {
     opacity: var(--opacity-secondary);
 }
 
+ul li,
+ol li {
+    margin-bottom: 0.25rem;
+}
+
 figure {
     margin: 2rem 0;
 }
