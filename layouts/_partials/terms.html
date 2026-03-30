@@ -2,9 +2,9 @@
 {{- $taxonomy := .taxonomy }}
 
 {{- with $page.GetTerms $taxonomy }}
-<div class="post-tags">
+  <div class="post-tags">
     {{- range . }}
-    <a href="{{ .RelPermalink }}" class="tag-item">#{{ .Name }}</a>
+      <a href="{{ .RelPermalink }}" class="tag-item">#{{ .Name }}</a>
     {{- end }}
-</div>
+  </div>
 {{- end }}

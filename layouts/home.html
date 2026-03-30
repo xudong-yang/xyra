@@ -1,40 +1,40 @@
 {{ define "main" }}
 
-{{- with .Content }}
-<section class="home-intro">{{ . }}</section>
-{{- end }}
+  {{- with .Content }}
+    <section class="home-intro">{{ . }}</section>
+  {{- end }}
 
-{{- $posts := where site.RegularPages "Section" "posts" }}
-{{- $latest := index ($posts.ByDate.Reverse) 0 }}
+  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- $latest := index ($posts.ByDate.Reverse) 0 }}
 
-{{- with $latest }}
-<article>
-    <h1>{{ .LinkTitle }}</h1>
-    <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
-    {{ .Date | time.Format ":date_long" }}
-    </time>
-    {{ .Content }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-</article>
-{{- end }}
+  {{- with $latest }}
+    <article>
+      <h1>{{ .LinkTitle }}</h1>
+      <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
+        {{ .Date | time.Format ":date_long" }}
+      </time>
+      {{ .Content }}
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </article>
+  {{- end }}
 
-{{- $recentPosts := after 1 ($posts.ByDate.Reverse) | first 5 }}
-<section class="recent-posts-section">
+  {{- $recentPosts := after 1 ($posts.ByDate.Reverse) | first 5 }}
+  <section class="recent-posts-section">
     <h2>Recent posts</h2>
     <ul class="post-list">
-        {{- range $recentPosts }}
+      {{- range $recentPosts }}
         <li class="post-item">
-            <a class="post-item-link" href="{{ .RelPermalink }}">
-                <span class="post-title">{{ .LinkTitle }}</span>
-                <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
-            </a>
+          <a class="post-item-link" href="{{ .RelPermalink }}">
+            <span class="post-title">{{ .LinkTitle }}</span>
+            <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
+          </a>
         </li>
-        {{- end }}
-        <li class="post-item post-item--all">
-            <a class="post-item-link" href='{{ "/posts" | relURL }}'>
-                <span class="post-title">More posts →</span>
-            </a>
-        </li>
+      {{- end }}
+      <li class="post-item post-item--all">
+        <a class="post-item-link" href='{{ "/posts" | relURL }}'>
+          <span class="post-title">More posts →</span>
+        </a>
+      </li>
     </ul>
-</section>
+  </section>
 {{ end }}

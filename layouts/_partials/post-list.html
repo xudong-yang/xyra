@@ -3,30 +3,30 @@
 {{- $tags := $page.Site.Taxonomies.tags -}}
 
 <div class="tag-bar">
-    {{- range $name, $posts := $tags }}
+  {{- range $name, $posts := $tags }}
     {{- $term := $page.Site.GetPage (printf "/tags/%s" $name) }}
     {{- if $term }}
-    <a href="{{ $term.RelPermalink }}"
-       class="tag-item{{ if eq $name $activeTag }} active{{ end }}">#{{ $name }}</a>
+      <a href="{{ $term.RelPermalink }}"
+         class="tag-item{{ if eq $name $activeTag }} active{{ end }}">#{{ $name }}</a>
     {{- end }}
-    {{- end }}
+  {{- end }}
 </div>
 
 {{- if $activeTag }}
-<p class="tag-filter-label">
+  <p class="tag-filter-label">
     Showing posts tagged <span class="tag-filter-name">#{{ $activeTag }}</span> —
     {{- $postsPage := $page.Site.GetPage "/posts" }}
     <a href="{{ $postsPage.RelPermalink }}">show all</a>
-</p>
+  </p>
 {{- end }}
 
 <ul class="post-list">
-    {{- range $page.Pages.ByDate.Reverse }}
+  {{- range $page.Pages.ByDate.Reverse }}
     <li class="post-item">
-        <a class="post-item-link" href="{{ .RelPermalink }}">
-            <span class="post-title">{{ .LinkTitle }}</span>
-            <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
-        </a>
+      <a class="post-item-link" href="{{ .RelPermalink }}">
+        <span class="post-title">{{ .LinkTitle }}</span>
+        <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
+      </a>
     </li>
-    {{- end }}
+  {{- end }}
 </ul>

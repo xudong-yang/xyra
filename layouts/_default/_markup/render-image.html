@@ -1,10 +1,10 @@
 {{- $dest := .Destination -}}
 {{- if and (not (hasPrefix $dest "http://")) (not (hasPrefix $dest "https://")) (not (hasPrefix $dest "/")) -}}
-{{- $dest = printf "%s%s" .Page.RelPermalink $dest -}}
+  {{- $dest = printf "%s%s" .Page.RelPermalink $dest -}}
 {{- end -}}
 <figure>
-    <img src="{{ $dest }}" alt="{{ .Text }}" loading="lazy">
-    {{- with .Text }}
+  <img src="{{ $dest }}" alt="{{ .Text }}" loading="lazy">
+  {{- with .Text }}
     <figcaption>{{ . }}</figcaption>
-    {{- end }}
+  {{- end }}
 </figure>
