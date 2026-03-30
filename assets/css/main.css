@@ -28,7 +28,7 @@ body {
 
 footer {
     border-top: 1px solid var(--border);
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: var(--text);
     opacity: var(--opacity-secondary);
 }
@@ -40,4 +40,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    opacity: var(--opacity-secondary);
 }
