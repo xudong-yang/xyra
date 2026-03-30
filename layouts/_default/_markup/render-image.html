@@ -45,6 +45,8 @@
 {{- with $width }}{{ $style = printf "%swidth:%s;" $style . }}{{ end -}}
 {{- with $height }}{{ $style = printf "%sheight:%s;" $style . }}{{ end -}}
 
+{{- $noCaption := and .Title (findRE `caption:false` .Title) -}}
+
 <figure>
   <img
     src="{{ $dest }}"
@@ -52,7 +54,7 @@
     loading="lazy"
     {{- with $style }} style="{{ . | safeCSS }}"{{ end }}
   >
-  {{- with .Text }}
-    <figcaption>{{ . }}</figcaption>
+  {{- if and .Text (not $noCaption) }}
+    <figcaption>{{ .Text }}</figcaption>
   {{- end }}
 </figure>
