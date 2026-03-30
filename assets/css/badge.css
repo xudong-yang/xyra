@@ -1,0 +1,26 @@
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.badge-item {
+  margin: 0;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.badge-item img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .badge-item {
+    height: 90px;
+  }
+}
