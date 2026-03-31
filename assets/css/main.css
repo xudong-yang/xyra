@@ -48,3 +48,7 @@ hr {
     border-top: 1px solid var(--border);
     opacity: var(--opacity-secondary);
 }
+
+details summary {
+    font-weight: bold;
+}
