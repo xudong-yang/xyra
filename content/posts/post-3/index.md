@@ -66,3 +66,19 @@ Aliqua deserunt tempor quis incididunt ut dolore velit cupidatat. Proident eiusm
 2. Excepteur dolore ea pariatur nisi laboris. Magna ut amet sint exercitation. Adipisicing enim deserunt duis proident.
 3. Fugiat cillum minim ut reprehenderit deserunt. Ullamco pariatur laborum exercitation. Nostrud labore sint irure consequat.
 4. Velit amet deserunt consequat fugiat. Tempor exercitation ad proident aliqua. Duis pariatur mollit minim incididunt.
+
+Exercitation occaecat consequat laboris pariatur minim. Duis aliqua deserunt velit irure ut. Enim fugiat sint nostrud eiusmod.
+
+```mermaid
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+
+
+
+
