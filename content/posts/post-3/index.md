@@ -69,7 +69,7 @@ Aliqua deserunt tempor quis incididunt ut dolore velit cupidatat. Proident eiusm
 
 Exercitation occaecat consequat laboris pariatur minim. Duis aliqua deserunt velit irure ut. Enim fugiat sint nostrud eiusmod.
 
-```mermaid
+```mermaid {caption="Caption of the diagram"}
 flowchart TD
     A[Christmas] -->|Get money| B(Go shopping)
     B --> C{Let me think}

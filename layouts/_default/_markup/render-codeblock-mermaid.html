@@ -1,5 +1,12 @@
-<pre class="mermaid">
-  {{- .Inner | htmlEscape | safeHTML -}}
-</pre>
+{{- $caption := .Attributes.caption -}}
+
+<figure>
+  <pre class="mermaid">
+    {{- .Inner | htmlEscape | safeHTML -}}
+  </pre>
+  {{- with $caption }}
+    <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
 {{- .Page.Store.Set "hasMermaid" true -}}
 
