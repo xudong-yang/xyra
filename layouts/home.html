@@ -8,6 +8,9 @@
   {{- $latest := index ($posts.ByDate.Reverse) 0 }}
 
   {{- with $latest }}
+  {{- if .Store.Get "hasMermaid" }}
+    {{- $.Store.Set "hasMermaid" true }}
+  {{- end }}
     <article>
       <h1>{{ .LinkTitle }}</h1>
       <time datetime='{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}'>
