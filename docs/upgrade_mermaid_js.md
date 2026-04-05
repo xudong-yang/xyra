@@ -1,19 +1,13 @@
-# Upgrade Mermaid
+# Upgrading Mermaid
 
 ## Steps
 
-1. Check the [Mermaid releases page](https://github.com/mermaid-js/mermaid/releases) for the latest version.
+1. Check the [Mermaid releases page](https://github.com/mermaid-js/mermaid/releases) for the target version.
 
-2. In the project root, run:
+2. In `layouts/baseof.html`, update the version number in the import URL:
 
-```bash
-NEW_VERSION=11.5.0  # replace with target version
-
-npm pack mermaid@$NEW_VERSION
-tar -xf mermaid-$NEW_VERSION.tgz
-rm -rf static/js/mermaid
-cp -r package/dist static/js/mermaid
-rm -rf package mermaid-$NEW_VERSION.tgz
+```javascript
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
 ```
 
 3. Verify the site works locally:
@@ -24,10 +18,14 @@ hugo server
 
 Check a page with a Mermaid diagram renders correctly.
 
-4. Commit the updated files:
+4. Commit the change:
 
 ```bash
-git add static/js/mermaid
-git commit -m "chore: upgrade mermaid to v$NEW_VERSION"
+git commit -m "chore: upgrade mermaid to v11.x.x"
 ```
+
+## Notes
+
+- Mermaid is loaded from jsDelivr CDN only on pages that contain a Mermaid diagram. Pages without diagrams are not affected.
+- To find the latest stable version, you can also run `npm show mermaid version`.
 
