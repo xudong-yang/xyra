@@ -8,12 +8,10 @@ enableRobotsTXT = true
   description = "Xudong's personal blog"
 
 [menus]
-
   [[menus.main]]
     name = 'posts'
     pageRef = '/posts'
     weight = 20
-
   [[menus.main]]
     name = 'about'
     pageRef = '/about'
@@ -28,3 +26,8 @@ enableRobotsTXT = true
    [markup.highlight]
      lineNos = true
      lineNumbersInTable = true
+
+[services]
+  [services.rss]
+    limit = 10
+
