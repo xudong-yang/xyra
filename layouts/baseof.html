@@ -2,16 +2,6 @@
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{ partial "head.html" . }}
-  {{- if .Store.Get "hasMermaid" }}
-    <script type="module">
-      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
-
-      mermaid.initialize({
-        startOnLoad: true,
-        theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
-      });
-    </script>
-  {{- end }}
 </head>
 <body>
 <header>
@@ -23,6 +13,16 @@
 <footer>
   {{ partial "footer.html" . }}
 </footer>
+{{- if .Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default'
+    });
+  </script>
+{{- end }}
 </body>
 </html>
 

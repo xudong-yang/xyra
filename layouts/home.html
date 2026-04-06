@@ -8,7 +8,7 @@
   {{- $latest := index ($posts.ByDate.Reverse) 0 }}
 
   {{- with $latest }}
-  {{- if .Store.Get "hasMermaid" }}
+  {{- if findRE "```mermaid" .RawContent }}
     {{- $.Store.Set "hasMermaid" true }}
   {{- end }}
     <article>
