@@ -1,8 +1,11 @@
+title = 'Xyra'
 baseURL = 'https://example.org/'
 languageCode = 'en-US'
-title = 'Xyra'
 disableKinds = ['taxonomy']
 enableRobotsTXT = true
+
+[params]
+  description = "Xudong's personal blog"
 
 [menus]
 
