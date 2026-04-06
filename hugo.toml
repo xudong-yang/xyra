@@ -5,7 +5,7 @@ disableKinds = ['taxonomy']
 enableRobotsTXT = true
 
 [params]
-  description = "Xudong's personal blog"
+  description = "A minimal hugo theme"
 
 [menus]
   [[menus.main]]

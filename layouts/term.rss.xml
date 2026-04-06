@@ -1,0 +1,4 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{- $pages := .Pages | first site.Config.Services.RSS.Limit -}}
+{{ partial "rss-feed.xml" (dict "pages" $pages "permalink" .Permalink "title" .Title) }}
+

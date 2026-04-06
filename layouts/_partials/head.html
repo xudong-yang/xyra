@@ -3,6 +3,7 @@
 <meta name="color-scheme" content="light dark">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" href="/favicon.ico">
+{{ partial "head/rss.html" . }}
 {{ partial "head/seo.html" . }}
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
