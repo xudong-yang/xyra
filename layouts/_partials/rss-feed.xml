@@ -11,10 +11,8 @@
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Summary | plainify | truncate 160 }}</description>
+      <description>{{ .Summary | plainify | htmlUnescape | truncate 160 }}</description>
       <content:encoded>{{ .Content | html }}</content:encoded>
-      <!-- <content:encoded><![CDATA[{{ .Content }}]]></content:encoded> -->
-      <!-- debug: {{ .Title }} {{ .Content | len }} -->
     </item>
     {{- end }}
   </channel>
