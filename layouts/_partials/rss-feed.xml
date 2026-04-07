@@ -6,13 +6,17 @@
     <language>{{ site.Language.LanguageCode }}</language>
     <atom:link href="{{ .permalink }}index.xml" rel="self" type="application/rss+xml"/>
     {{- range .pages }}
+    {{- $mermaidScript := "" }}
+    {{- if findRE "```mermaid" .RawContent }}
+      {{- $mermaidScript = partial "mermaid.html" . }}
+    {{- end }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | plainify | htmlUnescape | truncate 160 }}</description>
-      <content:encoded>{{ .Content | html }}</content:encoded>
+      <content:encoded>{{ (printf "%s%s" .Content $mermaidScript) | html }}</content:encoded>
     </item>
     {{- end }}
   </channel>
