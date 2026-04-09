@@ -2,8 +2,6 @@
 {{- $name  := .Get "name" -}}
 {{- $link  := .Get "link" -}}
 
-{{- $img := resources.Get $image -}}
-
 <figure class="badge-item">
   {{- if $link }}
     <a href="{{ $link }}" target="_blank" rel="noopener noreferrer">
@@ -13,3 +11,4 @@
     <img src="{{ $image }}" alt="{{ $name }}" loading="lazy">
   {{- end }}
 </figure>
+
