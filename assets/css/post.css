@@ -87,6 +87,15 @@ blockquote p {
 blockquote p:first-child { margin-top: 0; }
 blockquote p:last-child  { margin-bottom: 0; }
 
+code {
+    font-family: ui-monospace,
+                  "Cascadia Code",
+                  "Source Code Pro",
+                  Menlo,
+                  monospace;
+    font-size: 0.9em;
+}
+
 .post-tags {
     display: flex;
     flex-wrap: wrap;
