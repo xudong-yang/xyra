@@ -1,7 +1,7 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ `/index.xml` | absURL }}">
 {{- if .IsNode }}
-  {{- if not .IsHome }}
-    <link rel="alternate" type="application/rss+xml" title="{{ .Title }} on {{ site.Title }}" href="{{ .Permalink }}index.xml">
-  {{- end }}
+	{{- if not .IsHome }}
+		<link rel="alternate" type="application/rss+xml" title="{{ .Title }} on {{ site.Title }}" href="{{ .Permalink }}index.xml">
+	{{- end }}
 {{- end }}
 

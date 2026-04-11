@@ -11,39 +11,39 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-  </nav>
+	<nav>
+		<ul>
+			{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+		</ul>
+	</nav>
 {{- end }}
 
 {{- define "_partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "aria-current" "page") }}
-    {{- end }}
-    {{- $attrString := "" -}}
-    {{- range $k, $v := $attrs -}}
-      {{- with $v -}}
-        {{- $attrString = printf "%s %s=%q" $attrString $k $v -}}
-      {{- end -}}
-    {{- end -}}
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
-    <li>
-      <a {{ $attrString | safeHTMLAttr }} >{{ $name }}</a>
-      {{- with .Children }}
-        <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
-      {{- end }}
-    </li>
-  {{- end }}
+{{- $page := .page }}
+{{- range .menuEntries }}
+	{{- $attrs := dict "href" .URL }}
+	{{- if $page.IsMenuCurrent .Menu . }}
+		{{- $attrs = merge $attrs (dict "aria-current" "page") }}
+	{{- end }}
+	{{- $attrString := "" -}}
+	{{- range $k, $v := $attrs -}}
+		{{- with $v -}}
+			{{- $attrString = printf "%s %s=%q" $attrString $k $v -}}
+		{{- end -}}
+	{{- end -}}
+	{{- $name := .Name }}
+	{{- with .Identifier }}
+		{{- with T . }}
+			{{- $name = . }}
+		{{- end }}
+	{{- end }}
+	<li>
+		<a {{ $attrString | safeHTMLAttr }} >{{ $name }}</a>
+		{{- with .Children }}
+			<ul>
+				{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+			</ul>
+		{{- end }}
+	</li>
+{{- end }}
 {{- end }}

@@ -28,4 +28,3 @@ git commit -m "chore: upgrade mermaid to v11.x.x"
 
 - Mermaid is loaded from jsDelivr CDN only on pages that contain a Mermaid diagram. Pages without diagrams are not affected.
 - To find the latest stable version, you can also run `npm show mermaid version`.
-

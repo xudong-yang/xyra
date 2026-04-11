@@ -1,59 +1,60 @@
 :root {
-    color-scheme: light dark;
-    --bg: #f2f6f1;
-    --text: #222222;
-    --border: #a4a4a4;
-    --accent: #255f38;
-    --opacity-secondary: 0.8;
+  color-scheme: light dark;
+  --bg: #f2f6f1;
+  --text: #222222;
+  --border: #a4a4a4;
+  --accent: #255f38;
+  --opacity-secondary: 0.8;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0f1115;
-        --text: #e6e8eb;
-        --border: #3a4048;
-        --accent: #a0d585;
-    }
+  :root {
+    --bg: #0f1115;
+    --text: #e6e8eb;
+    --border: #3a4048;
+    --accent: #a0d585;
+  }
 }
 
 body {
-    color: var(--text);
-    background: var(--bg);
-    font-family: system-ui,
-                  -apple-system,
-                  BlinkMacSystemFont,
-                  "Segoe UI",
-                  Roboto,
-                  sans-serif;
-    line-height: 1.5;
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 0 20px;
+  color: var(--text);
+  background: var(--bg);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 footer {
-    border-top: 1px solid var(--border);
-    margin-top: 2rem;
-    color: var(--text);
-    opacity: var(--opacity-secondary);
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  color: var(--text);
+  opacity: var(--opacity-secondary);
 }
 
 a {
-    color: var(--accent);
-    text-decoration: none;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 hr {
-    margin: 2rem 0;
-    border: 0;
-    border-top: 1px solid var(--border);
-    opacity: var(--opacity-secondary);
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  opacity: var(--opacity-secondary);
 }
 
 details summary {
-    font-weight: bold;
+  font-weight: bold;
 }

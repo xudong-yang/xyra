@@ -1,20 +1,20 @@
 {{- $css := slice
-  (resources.Get "css/main.css")
-  (resources.Get "css/header.css")
-  (resources.Get "css/home.css")
-  (resources.Get "css/badge.css")
-  (resources.Get "css/posts.css")
-  (resources.Get "css/post.css")
+	(resources.Get "css/main.css")
+	(resources.Get "css/header.css")
+	(resources.Get "css/home.css")
+	(resources.Get "css/badge.css")
+	(resources.Get "css/posts.css")
+	(resources.Get "css/post.css")
 -}}
 
 {{- if hugo.IsDevelopment }}
-  {{- range $css }}
-    {{- if . }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{- end }}
-  {{- end }}
+	{{- range $css }}
+		{{- if . }}
+			<link rel="stylesheet" href="{{ .RelPermalink }}">
+		{{- end }}
+	{{- end }}
 {{- else }}
-  {{- $bundle := $css | resources.Concat "css/bundle.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"
-        crossorigin="anonymous">
+	{{- $bundle := $css | resources.Concat "css/bundle.css" | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"
+		crossorigin="anonymous">
 {{- end }}

@@ -1,42 +1,42 @@
 {{ define "main" }}
-  <article>
-    <h1>{{ .Title }}</h1>
+<article>
+	<h1>{{ .Title }}</h1>
 
-    {{ if eq .Section "posts" }}
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-    {{ end }}
+	{{ if eq .Section "posts" }}
+		{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+		{{ $dateHuman := .Date | time.Format ":date_long" }}
+		<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+	{{ end }}
 
-    {{ .Content }}
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  </article>
+	{{ .Content }}
+	{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</article>
 
-  {{ if eq .Section "posts" }}
-    {{ $prev := .PrevInSection }}
-    {{ $next := .NextInSection }}
-    {{ if or $prev $next }}
-      <section class="recent-posts-section">
-        <h2>More posts</h2>
-        <ul class="post-list">
-          {{ with $next }}
-            <li class="post-item">
-              <a class="post-item-link" href="{{ .RelPermalink }}">
-                <span class="post-title">↑ Newer post: {{ .LinkTitle }}</span>
-                <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
-              </a>
-            </li>
-          {{ end }}
-          {{ with $prev }}
-            <li class="post-item">
-              <a class="post-item-link" href="{{ .RelPermalink }}">
-                <span class="post-title">↓ Older post: {{ .LinkTitle }}</span>
-                <span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </section>
-    {{ end }}
-  {{ end }}
+{{ if eq .Section "posts" }}
+	{{ $prev := .PrevInSection }}
+	{{ $next := .NextInSection }}
+	{{ if or $prev $next }}
+		<section class="recent-posts-section">
+			<h2>More posts</h2>
+			<ul class="post-list">
+				{{ with $next }}
+					<li class="post-item">
+						<a class="post-item-link" href="{{ .RelPermalink }}">
+							<span class="post-title">↑ Newer post: {{ .LinkTitle }}</span>
+							<span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
+						</a>
+					</li>
+				{{ end }}
+				{{ with $prev }}
+					<li class="post-item">
+						<a class="post-item-link" href="{{ .RelPermalink }}">
+							<span class="post-title">↓ Older post: {{ .LinkTitle }}</span>
+							<span class="post-date">{{ .Date | time.Format "Jan 02, 2006" }}</span>
+						</a>
+					</li>
+				{{ end }}
+			</ul>
+		</section>
+	{{ end }}
+{{ end }}
 {{ end }}

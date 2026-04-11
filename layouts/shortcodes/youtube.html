@@ -2,20 +2,14 @@
 {{- $class := .Get "class" | default "youtube-embed" -}}
 
 <div class="{{ $class }}">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/{{ $id }}"
-    title="YouTube Video"
-    allowfullscreen
-    allow="accelerometer;
-      autoplay;
-      clipboard-write;
-      encrypted-media;
-      gyroscope;
-      picture-in-picture;
-      web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    loading="lazy"
-    frameborder="0"
-  ></iframe>
+	<iframe
+		src="https://www.youtube-nocookie.com/embed/{{ $id }}"
+		title="YouTube Video"
+		allowfullscreen
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		loading="lazy"
+		frameborder="0"
+	></iframe>
 </div>
 

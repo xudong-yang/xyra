@@ -1,85 +1,87 @@
 .tag-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .tag-item {
-    font-size: 0.875rem;
-    color: var(--text);
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.1s, color 0.1s;
+  font-size: 0.875rem;
+  color: var(--text);
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition:
+    background 0.1s,
+    color 0.1s;
 }
 
 .tag-item:hover {
-    background: color-mix(in srgb, var(--accent) 12%, transparent);
-    color: var(--accent);
-    text-decoration: none;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .tag-item.active {
-    background: color-mix(in srgb, var(--accent) 15%, transparent);
-    color: var(--accent);
-    font-weight: 600;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .tag-filter-label {
-    font-size: 0.875rem;
-    color: var(--text);
-    opacity: 0.7;
-    margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
 }
 
 .tag-filter-name {
-    font-weight: 600;
-    opacity: 1;
-    color: var(--accent);
+  font-weight: 600;
+  opacity: 1;
+  color: var(--accent);
 }
 
 .tag-filter-label a {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .post-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .post-item {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .post-item:hover .post-item-link {
-    background: color-mix(in srgb, var(--text) 6%, transparent);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
 }
 
 .post-item-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    width: 100%;
-    padding: 0.4rem 0.5rem;
-    border-radius: 4px;
-    transition: background 0.1s;
-    font-weight: bold;
-    color: var(--accent);
-    text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.1s;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .post-item-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .post-date {
-    margin-left: auto;
-    font-size: 0.875rem;
-    color: var(--text);
-    opacity: var(--opacity-secondary);
-    white-space: nowrap;
-    flex-shrink: 0;
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--text);
+  opacity: var(--opacity-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
