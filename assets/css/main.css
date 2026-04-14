@@ -62,3 +62,8 @@ details summary {
 pre {
   overflow-x: auto;
 }
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

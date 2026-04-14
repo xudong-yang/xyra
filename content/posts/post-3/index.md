@@ -26,12 +26,12 @@ console.log(result, ok, data);
 
 Aliquip Lorem officia est in `incididunt excepteur pariatur` do fugiat cupidatat. Magna incididunt enim voluptate consequat non laboris deserunt labore velit sit. Adipisicing veniam anim elit laboris qui dolor dolore. Reprehenderit aliquip pariatur cillum ullamco ullamco qui eiusmod cupidatat ea exercitation.
 
-| Language   | Paradigm    | Typed   |
-| ---------- | ----------- | ------- |
-| Go         | Compiled    | Static  |
-| Python     | Interpreted | Dynamic |
-| TypeScript | Transpiled  | Static  |
-| Rust       | Compiled    | Static  |
+| Language   | Paradigm    | Typed   | Notable Features                                                                                 |
+| ---------- | ----------- | ------- | ------------------------------------------------------------------------------------------------ |
+| Go         | Compiled    | Static  | Built-in concurrency with goroutines and channels, fast compile times, garbage collected         |
+| Python     | Interpreted | Dynamic | Extremely readable syntax, massive ecosystem, dominant in data science and ML workflows          |
+| TypeScript | Transpiled  | Static  | Superset of JavaScript with optional static typing, excellent IDE tooling and inference          |
+| Rust       | Compiled    | Static  | Memory safety without a garbage collector, ownership model eliminates data races at compile time |
 
 Ut laboris minim fugiat reprehenderit pariatur excepteur duis aliqua incididunt. Commodo deserunt nisi laboris proident nostrud dolore ea velit. Tempor anim esse incididunt occaecat sint nulla voluptate ut culpa fugiat.
 
