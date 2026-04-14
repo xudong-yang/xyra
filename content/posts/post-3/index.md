@@ -101,6 +101,12 @@ const line1 = buildLine(result, concat, computed),
 console.log(line1, line2, line3, data, map, computed, concat, serialized);
 ```
 
+{{< carousel >}}
+![Image by <a href="https://pixabay.com/users/ideativas-tlm-19346105/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8176000">Raquel Candia</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8176000">Pixabay</a>](./ideativas-tlm-marshlands-8176000.png)
+![Image by <a href="https://pixabay.com/users/mollyroselee-9214707/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8893160">Mollyroselee</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8893160">Pixabay</a>](./mollyroselee-road-8893160.jpg)
+![Image by <a href="https://pixabay.com/users/tylijura-22072131/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10153221">Tyli Jura</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=10153221">Pixabay</a>](./tylijura-car-10153221.jpg)
+{{< /carousel >}}
+
 - Amet incididunt nostrud aliqua pariatur excepteur minim. Duis sint proident velit reprehenderit ullamco laborum. Enim cupidatat fugiat labore irure consequat.
 - Laborum ad deserunt consequat sint mollit ipsum. Excepteur eiusmod nulla pariatur elit. Velit officia minim incididunt ut reprehenderit.
 - Pariatur fugiat aliqua exercitation magna culpa nostrud. Duis consectetur ullamco est veniam. Proident adipisicing tempor sint non.

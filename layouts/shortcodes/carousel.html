@@ -1,0 +1,19 @@
+{{- $page := .Page -}}
+<div class="carousel">
+	<div class="carousel-track">
+		{{- range $line := split .Inner "\n" -}}
+			{{- $line = trim $line "\r\n " -}}
+			{{- with findRESubmatch `^!\[([^\]]*)\]\(([^)]+)\)` $line -}}
+				{{- $alt := index (index . 0) 1 -}}
+				{{- $dest := trim (index (index . 0) 2) " " -}}
+				{{- partial "render-image-core.html" (dict
+					"Destination" $dest
+					"Text" $alt
+					"Title" ""
+					"Page" $page
+					)
+				-}}
+			{{- end -}}
+		{{- end -}}
+	</div>
+</div>

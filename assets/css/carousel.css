@@ -1,0 +1,21 @@
+.carousel {
+	margin: 2rem 0;
+}
+
+.carousel-track {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+	display: none;
+}
+
+.carousel-track figure {
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	width: 88%;
+	margin-right: 1rem;
+}

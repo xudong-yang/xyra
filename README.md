@@ -100,7 +100,7 @@ Embed YouTube videos (privacy-enhanced mode):
 
 ### Carousel
 
-Horizontal scrolling image carousel:
+Horizontal scrolling image carousel (basic `![alt](src)` syntax only):
 
 ```
 {{< carousel >}}
@@ -108,6 +108,8 @@ Horizontal scrolling image carousel:
 ![Image 2](/images/img2.png)
 {{< /carousel >}}
 ```
+
+The carousel reuses the shared image rendering partial, so images render identically to standalone images.
 
 ## Mermaid Diagrams
 

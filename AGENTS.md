@@ -49,12 +49,12 @@ xyra/
 | `{{< badge >}}` | `image`, `name`, `link` attributes |
 | `{{< badges >}}` | Container for multiple badges |
 | `{{< youtube "VIDEO_ID" >}}` | Embed YouTube (privacy-enhanced) |
-| `{{< carousel >}}` | Horizontal scrolling image container |
+| `{{< carousel >}}` | Horizontal scrolling image container (basic `![alt](src)` syntax only) |
 
 ## Markup Renderers
 - **Code blocks**: Syntax highlighting with line numbers
 - **Mermaid**: Dynamic CDN loading (jsDelivr) when diagrams present
-- **Images**: Lazy loading, captions support
+- **Images**: Rendered via shared `layouts/_partials/render-image-core.html` partial. Supports lazy loading, captions (including HTML), width/height attributes, and resource resolution. Used by both the image render hook and carousel shortcode.
 - **Links**: External links auto-open in new tab
 
 ## Mermaid.js Upgrade

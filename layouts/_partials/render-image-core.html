@@ -1,0 +1,60 @@
+{{- $dest := .Destination -}}
+{{- if and (not (hasPrefix $dest "http://")) (not (hasPrefix $dest "https://")) (not (hasPrefix $dest "/")) -}}
+	{{- $dest = printf "%s%s" .Page.RelPermalink (strings.TrimPrefix "./" $dest) -}}
+{{- end -}}
+
+{{- $width := "" -}}
+{{- $height := "" -}}
+
+{{- with .Title -}}
+	{{- $w := replaceRE `.*width:'?([^'}" ,]+)'?.*` "$1" . -}}
+	{{- $h := replaceRE `.*height:'?([^'}" ,]+)'?.*` "$1" . -}}
+
+	{{- if ne $w . -}}
+		{{- if hasSuffix $w "px" -}}
+			{{- $width = $w -}}
+		{{- else if hasSuffix $w "%" -}}
+			{{- $width = $w -}}
+		{{- else -}}
+			{{- $f := float $w -}}
+			{{- if gt $f 1.0 -}}
+				{{- $width = printf "%spx" $w -}}
+			{{- else -}}
+				{{- $width = printf "%.0f%%" (mul $f 100) -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+
+	{{- if ne $h . -}}
+		{{- if hasSuffix $h "px" -}}
+			{{- $height = $h -}}
+		{{- else if hasSuffix $h "%" -}}
+			{{- $height = $h -}}
+		{{- else -}}
+			{{- $f := float $h -}}
+			{{- if gt $f 1.0 -}}
+				{{- $height = printf "%spx" $h -}}
+			{{- else -}}
+				{{- $height = printf "%.0f%%" (mul $f 100) -}}
+			{{- end -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+{{- $style := "" -}}
+{{- with $width }}{{ $style = printf "%swidth:%s;" $style . }}{{ end -}}
+{{- with $height }}{{ $style = printf "%sheight:%s;" $style . }}{{ end -}}
+
+{{- $noCaption := and .Title (findRE `caption:false` .Title) -}}
+
+<figure>
+	<img
+		src="{{ $dest }}"
+		alt="{{ .Text }}"
+		loading="lazy"
+		{{- with $style }} style="{{ . | safeCSS }}"{{ end }}
+	>
+	{{- if and .Text (not $noCaption) }}
+		<figcaption>{{ .Text | safeHTML }}</figcaption>
+	{{- end }}
+</figure>
