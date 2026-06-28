@@ -3,7 +3,7 @@
     <title>{{ .title }} | {{ site.Title }}</title>
     <link>{{ site.BaseURL }}</link>
     <description>{{ site.Params.description }}</description>
-    <language>{{ site.Language.LanguageCode }}</language>
+    <language>{{ site.Language.Locale }}</language>
     <atom:link href="{{ .permalink }}index.xml" rel="self" type="application/rss+xml"/>
     {{- range .pages }}
     {{- $mermaidScript := "" }}

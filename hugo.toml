@@ -1,6 +1,6 @@
 title = 'Xyra'
 baseURL = 'https://example.org/'
-languageCode = 'en-US'
+locale = 'en-US'
 disableKinds = ['taxonomy']
 enableRobotsTXT = true
 
